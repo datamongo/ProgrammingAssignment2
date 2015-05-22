@@ -37,13 +37,13 @@ makeCacheMatrix <- function(x = matrix()) {
 ## a new matrix is read into data and its inverse calculated, stored in
 ## in variable m and returned. If the matrix inverse has already been
 ## calculated then it is stored in m and the if loop is executed and the
-# cached value of m is returned
+## cached value of m is returned
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         m <- x$getinv()
         if(!is.null(m)) {
-                message("getting cached data")
+                message("Getting cached Matrix ... ")
                 return(m)
         }
         data <- x$get()
